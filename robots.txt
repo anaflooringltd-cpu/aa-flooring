@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update domain below when aa-flooring.ca is connected
+Sitemap: https://anaflooringltd-cpu.github.io/aa-flooring/sitemap.xml
