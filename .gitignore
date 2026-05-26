@@ -43,3 +43,13 @@ sanity.types.ts
 
 # Raw asset originals (deployed copies live under public/images/portfolio/)
 /images/
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+
+!.env.example
