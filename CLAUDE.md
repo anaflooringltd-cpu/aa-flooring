@@ -125,6 +125,14 @@ The Vercel project name is `aa-flooring` (URL: https://aa-flooring-aa-flooring.v
 
 ## Deploying
 
+### The normal workflow
+1. Make changes to the code
+2. `git add` + `git commit` + `git push origin main`
+3. Vercel detects the push and auto-deploys within ~60 seconds
+4. Live at https://aa-flooring-aa-flooring.vercel.app (or aa-flooring.ca once connected)
+
+**That's it — no manual deploy step needed.**
+
 ### Vercel (current host)
 Push to `main` → Vercel auto-deploys. No build config needed.
 
