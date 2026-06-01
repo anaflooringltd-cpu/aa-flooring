@@ -4,7 +4,7 @@
 
 Next.js 15 website for **A&A Flooring Accessories**, a Coquitlam, BC flooring contractor. The site is the primary SEO and lead-generation asset for the business.
 
-**Live URL:** https://aa-flooring.vercel.app (Vercel preview domain until aa-flooring.ca is connected)  
+**Live URL:** https://aa-flooring.ca (also www.aa-flooring.ca)  
 **GitHub repo:** https://github.com/anaflooringltd-cpu/aa-flooring  
 **Business email:** anaflooringltd@gmail.com  
 **Phone:** (778) 881-3604
@@ -121,7 +121,7 @@ vercel --scope aa-flooring             # deploy preview
 vercel --prod --scope aa-flooring      # deploy to production
 ```
 
-The Vercel project name is `aa-flooring` (URL: https://aa-flooring-aa-flooring.vercel.app).
+The Vercel project name is `aa-flooring` (production URL: https://aa-flooring.ca).
 
 ---
 
@@ -131,7 +131,7 @@ The Vercel project name is `aa-flooring` (URL: https://aa-flooring-aa-flooring.v
 1. Make changes to the code
 2. `git add` + `git commit` + `git push origin main`
 3. Vercel detects the push and auto-deploys within ~60 seconds
-4. Live at https://aa-flooring-aa-flooring.vercel.app (or aa-flooring.ca once connected)
+4. Live at https://aa-flooring.ca within ~60 seconds
 
 **That's it — no manual deploy step needed.**
 
@@ -149,11 +149,9 @@ Or via the dashboard:
 3. Click Deploy
 
 ### Custom domain (aa-flooring.ca)
-1. Vercel dashboard → Project → Settings → Domains
-2. Add `aa-flooring.ca`
-3. Update DNS at domain registrar to point to Vercel nameservers
-4. Update `NEXT_PUBLIC_SITE_URL=https://aa-flooring.ca`
-5. Update canonical URLs in `src/lib/site-config.ts`
+Domain is live and connected. DNS is managed by Vercel (ns1/ns2.vercel-dns.com).
+Both `aa-flooring.ca` and `www.aa-flooring.ca` point to the project.
+`NEXT_PUBLIC_SITE_URL` is set to `https://aa-flooring.ca` in Vercel production env.
 
 ---
 
