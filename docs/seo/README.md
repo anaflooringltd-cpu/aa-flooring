@@ -35,29 +35,24 @@ Work through phases in order. Each phase builds on the last. Tick items off as t
   - Get a `GOOGLE_PLACES_API_KEY` from Google Cloud Console (free tier covers this)
   - Get the `GOOGLE_PLACE_ID` for the business listing
   - Add both to Vercel env vars: `vercel env add GOOGLE_PLACES_API_KEY production --scope aa-flooring`
-- [ ] Manually populate `src/data/google-reviews.json` with real reviews as static fallback (see format in file)
+- [x] ~~Manually populate `src/data/google-reviews.json` with real reviews as static fallback~~ ✅ Done — 8 reviews + 5.0★/20 count showing. Replace review text with real GBP reviews when available.
 
 ---
 
 ## Phase 3 — Content Expansion
 > Next 30 days. Free. More pages = more keywords = more traffic.
 
-**Enable 4 disabled cities** (currently `launch: false` in `src/lib/site-config.ts`):
-- Port Coquitlam, New Westminster, Surrey, Maple Ridge
-- Enabling each city auto-generates 4 combo pages (e.g., `hardwood-surrey`, `vinyl-laminate-new-westminster`)
-- Need to add `citiesContent` entries in `src/lib/cities-content.ts` for each (neighborhoods, local notes)
+**Enable 4 disabled cities:**
+- [x] ~~Port Coquitlam, New Westminster, Surrey, Maple Ridge — enabled, city pages + 16 combo pages live~~ ✅ Done (June 2026, 37 → 53 routes)
 
 **Fix missing OG image:**
-- Create `public/og/default.png` (1200×630px) — currently a 404, breaks social sharing
-- Should show the A&A Flooring name + a portfolio photo
+- [x] ~~Create OG image~~ ✅ Done — `src/app/opengraph-image.tsx` generates dynamic dark-wood card at `/opengraph-image`
 
 **Strengthen homepage for keywords:**
-- Add a keyword-rich subheading near the top of `src/app/page.tsx`
-- Example: "Hardwood, vinyl & laminate installation across Coquitlam and the Lower Mainland"
-- The current H1 ("Floors, finished the way they should be.") is beautiful but not keyword-targeted
+- [x] ~~Add keyword-rich eyebrow and geo cities to subtext~~ ✅ Done — "Flooring Contractor · Coquitlam, BC" + Tri-Cities/Surrey in subparagraph
 
 **Add city-level FAQs:**
-- Service pages have FAQ schema — city pages don't
+- [ ] Service pages have FAQ schema — city pages don't
 - Adding FAQs to city pages helps capture "flooring [city]" question-based searches
 
 ---
@@ -178,15 +173,17 @@ Show display ads to people who visited but didn't convert:
 
 | Item | Status |
 |---|---|
-| Domain live | ✅ aa-flooring.ca |
-| Sitemap | ✅ 35 URLs at /sitemap.xml |
+| Domain live | ✅ aa-flooring.ca (connected June 2026) |
+| Sitemap | ✅ 53 URLs at /sitemap.xml (was 35) |
 | Schema markup | ✅ FlooringContractor, Service, FAQ, Breadcrumb, AggregateRating |
 | Google Business Profile | ✅ 5.0 ⭐, 20 reviews |
 | Vercel Analytics | ✅ Installed |
-| Google Search Console | ❌ Not yet submitted |
-| Live reviews on website | ❌ Google Places API not connected |
-| OG image | ❌ /og/default.png missing |
-| Port Coquitlam / Surrey pages | ❌ Cities disabled |
+| Reviews on website | ✅ 8 reviews + 5.0★/20 rating showing on homepage (placeholder data — replace with real review text from GBP) |
+| OG image | ✅ /opengraph-image — dynamic dark-wood card via Next.js ImageResponse |
+| Homepage keywords | ✅ Eyebrow: "Flooring Contractor · Coquitlam, BC" + geo cities in subtext |
+| All 8 cities live | ✅ Port Coquitlam, New Westminster, Surrey, Maple Ridge enabled (June 2026) |
+| Google Search Console | ❌ Not yet submitted — do this next |
+| Live reviews via Google Places API | ❌ Not connected — needs GOOGLE_PLACES_API_KEY + GOOGLE_PLACE_ID |
 | Blog | ❌ Not built yet |
 | Google Ads | ❌ Not started |
 | Google Local Services Ads | ❌ Not started |
