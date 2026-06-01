@@ -107,12 +107,33 @@ npm run dev                  # http://localhost:3000
 
 ---
 
+## Vercel CLI
+
+The project lives under the **`aa-flooring`** team scope. Always pass `--scope aa-flooring` when using the CLI:
+
+```bash
+vercel ls --scope aa-flooring          # list deployments
+vercel logs --scope aa-flooring        # view logs
+vercel env ls --scope aa-flooring      # list env vars
+vercel --scope aa-flooring             # deploy preview
+vercel --prod --scope aa-flooring      # deploy to production
+```
+
+The Vercel project name is `aa-flooring` (URL: https://aa-flooring-aa-flooring.vercel.app).
+
+---
+
 ## Deploying
 
 ### Vercel (current host)
 Push to `main` → Vercel auto-deploys. No build config needed.
 
-To deploy manually:
+To deploy manually via CLI:
+```bash
+vercel --prod --scope aa-flooring
+```
+
+Or via the dashboard:
 1. Go to vercel.com → Import `anaflooringltd-cpu/aa-flooring`
 2. Set `NEXT_PUBLIC_SITE_URL` env var
 3. Click Deploy
