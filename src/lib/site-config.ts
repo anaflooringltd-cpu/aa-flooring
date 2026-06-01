@@ -36,10 +36,10 @@ export const siteConfig = {
     { name: "Port Moody", slug: "port-moody", launch: true },
     { name: "Burnaby", slug: "burnaby", launch: true },
     { name: "Vancouver", slug: "vancouver", launch: true },
-    { name: "Port Coquitlam", slug: "port-coquitlam", launch: false },
-    { name: "New Westminster", slug: "new-westminster", launch: false },
-    { name: "Surrey", slug: "surrey", launch: false },
-    { name: "Maple Ridge", slug: "maple-ridge", launch: false },
+    { name: "Port Coquitlam", slug: "port-coquitlam", launch: true },
+    { name: "New Westminster", slug: "new-westminster", launch: true },
+    { name: "Surrey", slug: "surrey", launch: true },
+    { name: "Maple Ridge", slug: "maple-ridge", launch: true },
   ],
 
   services: [

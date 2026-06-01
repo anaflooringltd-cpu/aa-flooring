@@ -12,7 +12,7 @@ export function localBusinessSchema(): Json {
     url: siteConfig.url,
     telephone: siteConfig.nap.telephone,
     email: siteConfig.nap.email,
-    image: absoluteUrl("/og/default.png"),
+    image: absoluteUrl("/opengraph-image"),
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",

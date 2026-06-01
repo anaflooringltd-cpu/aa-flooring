@@ -14,14 +14,15 @@ export default function HomePage() {
         <div className="container-prose grid items-end gap-12 pt-16 pb-20 md:grid-cols-[1.05fr_1fr] md:pt-24 md:pb-28">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-muted)]">
-              Coquitlam &middot; Since {siteConfig.founded}
+              Flooring Contractor &middot; Coquitlam, BC &middot; Since {siteConfig.founded}
             </p>
             <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] md:text-7xl">
               Floors, finished the way they should be.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-muted)]">
               Hardwood, vinyl, and laminate installation across the Lower Mainland —
-              plus custom stair treads and accessories made on site.
+              Tri-Cities, Burnaby, Vancouver, and Surrey. Plus custom stair treads
+              and accessories made on site.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">

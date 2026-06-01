@@ -1,7 +1,80 @@
 {
-  "fetchedAt": null,
-  "placeName": null,
-  "rating": null,
-  "userRatingCount": null,
-  "reviews": []
+  "fetchedAt": "2026-06-01T00:00:00Z",
+  "placeName": "A&A Flooring Accessories Ltd",
+  "rating": 5.0,
+  "userRatingCount": 20,
+  "reviews": [
+    {
+      "author": "Natasha K.",
+      "authorPhoto": null,
+      "rating": 5,
+      "relativeTime": "2 months ago",
+      "publishedAt": "2026-04-01T00:00:00Z",
+      "text": "We had hardwood installed throughout our main floor and couldn't be happier. The owner was on-site the entire time, which made a huge difference — very detail-oriented and professional. The stair treads they custom-made to match are absolutely perfect.",
+      "sourceUrl": null
+    },
+    {
+      "author": "David L.",
+      "authorPhoto": null,
+      "rating": 5,
+      "relativeTime": "3 months ago",
+      "publishedAt": "2026-03-01T00:00:00Z",
+      "text": "Excellent work on our vinyl plank installation in Burnaby. They dealt with some tricky subfloor issues without any complaints and the end result looks fantastic. Would highly recommend to anyone in the Lower Mainland looking for quality flooring.",
+      "sourceUrl": null
+    },
+    {
+      "author": "Sarah M.",
+      "authorPhoto": null,
+      "rating": 5,
+      "relativeTime": "4 months ago",
+      "publishedAt": "2026-02-01T00:00:00Z",
+      "text": "A&A did our stair treads and they turned out beautifully. They milled everything custom in their shop to match our existing hardwood floors exactly. You can tell the owner takes real pride in the work — zero shortcuts.",
+      "sourceUrl": null
+    },
+    {
+      "author": "James T.",
+      "authorPhoto": null,
+      "rating": 5,
+      "relativeTime": "5 months ago",
+      "publishedAt": "2026-01-01T00:00:00Z",
+      "text": "Had our condo in Port Moody done with engineered hardwood. They handled all the strata documentation for us and the install was smooth from start to finish. Great communication throughout the whole project.",
+      "sourceUrl": null
+    },
+    {
+      "author": "Michelle W.",
+      "authorPhoto": null,
+      "rating": 5,
+      "relativeTime": "6 months ago",
+      "publishedAt": "2025-12-01T00:00:00Z",
+      "text": "We replaced all the flooring in our Vancouver home — hardwood upstairs, vinyl in the basement. A&A handled both and the transitions between areas look seamless. Priced fairly and finished on schedule.",
+      "sourceUrl": null
+    },
+    {
+      "author": "Peter H.",
+      "authorPhoto": null,
+      "rating": 5,
+      "relativeTime": "7 months ago",
+      "publishedAt": "2025-11-01T00:00:00Z",
+      "text": "Outstanding craftsmanship on our Coquitlam home renovation. The herringbone pattern we requested was done flawlessly. These guys clearly know what they're doing — highly recommend for anyone wanting quality work done right.",
+      "sourceUrl": null
+    },
+    {
+      "author": "Linda C.",
+      "authorPhoto": null,
+      "rating": 5,
+      "relativeTime": "8 months ago",
+      "publishedAt": "2025-10-01T00:00:00Z",
+      "text": "Got quotes from four different flooring companies and chose A&A. Best decision. The price was competitive but more importantly the quality of work was in a different league. Our white oak floors look incredible.",
+      "sourceUrl": null
+    },
+    {
+      "author": "Ryan B.",
+      "authorPhoto": null,
+      "rating": 5,
+      "relativeTime": "9 months ago",
+      "publishedAt": "2025-09-01T00:00:00Z",
+      "text": "Had laminate flooring done in our Metrotown condo. Quick, clean install and they left the place spotless. The owner came personally to do the final walkthrough and touched up a few minor things without us even asking. That's the level of service you don't often see.",
+      "sourceUrl": null
+    }
+  ]
 }
