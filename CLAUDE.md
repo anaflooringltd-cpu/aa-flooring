@@ -109,6 +109,8 @@ npm run dev                  # http://localhost:3000
 
 ## Vercel CLI
 
+Vercel is managed via the CLI — there is no `.mcp.json` in this repo. Log in once with `vercel login`, then use the CLI for all Vercel operations.
+
 The project lives under the **`aa-flooring`** team scope. Always pass `--scope aa-flooring` when using the CLI:
 
 ```bash
