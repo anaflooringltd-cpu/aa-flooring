@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { getAllCombos } from "@/lib/service-city-matrix";
+import { blogPosts } from "@/lib/blog-content";
 import { absoluteUrl } from "@/lib/utils";
 
 export const dynamic = "force-static";
@@ -15,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/reviews",
     "/about",
     "/contact",
+    "/blog",
   ];
 
   const services = siteConfig.services.map((s) => `/services/${s.slug}`);
@@ -22,8 +24,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((c) => c.launch)
     .map((c) => `/service-areas/${c.slug}`);
   const combos = getAllCombos().map((c) => `/${c.combo}`);
+  const posts = blogPosts.map((p) => `/blog/${p.slug}`);
 
-  return [...staticPaths, ...services, ...cities, ...combos].map((path) => ({
+  return [...staticPaths, ...services, ...cities, ...combos, ...posts].map((path) => ({
     url: absoluteUrl(path),
     lastModified: now,
     changeFrequency: "weekly",
@@ -32,6 +35,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? 1.0
         : path.startsWith("/services/") || /^\/[a-z-]+-[a-z-]+$/.test(path)
           ? 0.8
-          : 0.6,
+          : path.startsWith("/blog/")
+            ? 0.7
+            : 0.6,
   }));
 }

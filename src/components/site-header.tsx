@@ -29,6 +29,9 @@ export function SiteHeader() {
           <Link href="/about" className="text-sm hover:text-[var(--color-accent)]">
             About
           </Link>
+          <Link href="/blog" className="text-sm hover:text-[var(--color-accent)]">
+            Blog
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">

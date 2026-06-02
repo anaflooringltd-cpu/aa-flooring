@@ -45,6 +45,34 @@ export function SiteFooter() {
 
         <div>
           <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-muted)]">
+            Resources
+          </p>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li>
+              <Link href="/blog" className="hover:text-[var(--color-accent)]">
+                Flooring Tips &amp; Advice
+              </Link>
+            </li>
+            <li>
+              <Link href="/portfolio" className="hover:text-[var(--color-accent)]">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link href="/reviews" className="hover:text-[var(--color-accent)]">
+                Reviews
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-[var(--color-accent)]">
+                About Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-muted)]">
             Service Areas
           </p>
           <ul className="mt-4 space-y-2 text-sm">

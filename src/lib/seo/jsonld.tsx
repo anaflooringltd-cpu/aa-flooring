@@ -119,6 +119,27 @@ export function reviewsSchema(reviews: Array<{
   };
 }
 
+export function articleSchema(args: {
+  title: string;
+  description: string;
+  url: string;
+  publishedAt: string;
+  modifiedAt?: string;
+}): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: args.title,
+    description: args.description,
+    url: args.url,
+    datePublished: args.publishedAt,
+    dateModified: args.modifiedAt ?? args.publishedAt,
+    author: { "@id": `${siteConfig.url}/#business` },
+    publisher: { "@id": `${siteConfig.url}/#business` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": args.url },
+  };
+}
+
 export function JsonLd({ data }: { data: Json | Json[] }) {
   const payload = Array.isArray(data) ? data : [data];
   return payload
