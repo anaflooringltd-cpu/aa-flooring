@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
@@ -12,6 +13,13 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <section className="container-prose flex min-h-[60vh] flex-col items-start justify-center py-24">
+      <Script id="ads-conversion" strategy="afterInteractive">{`
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18299833283/2xh9CNq4gsscEMOXhZZE',
+          'value': 1.0,
+          'currency': 'CAD'
+        });
+      `}</Script>
       <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-muted)]">
         Quote request received
       </p>
