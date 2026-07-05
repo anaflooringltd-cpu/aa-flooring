@@ -27,6 +27,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/aa.flooring/",
     facebook: "https://www.facebook.com/aa.flooring.ca",
     whatsapp: "https://wa.me/17788813604",
+    googleBusiness: "", // paste your GBP short link here (e.g. https://maps.app.goo.gl/xxx)
   },
 
   serviceRadiusKm: 40,

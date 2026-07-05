@@ -45,7 +45,8 @@ export function localBusinessSchema(): Json {
     sameAs: [
       siteConfig.social.instagram,
       siteConfig.social.facebook,
-    ],
+      siteConfig.social.googleBusiness,
+    ].filter(Boolean),
   };
 }
 

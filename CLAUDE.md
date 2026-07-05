@@ -20,8 +20,8 @@ Next.js 15 website for **A&A Flooring Accessories**, a Coquitlam, BC flooring co
 | Language | TypeScript |
 | CMS | Sanity (optional — site works without it) |
 | Contact form | FormSubmit.co (no API key needed) |
-| Analytics | Vercel Analytics (built-in) |
-| Hosting | Vercel |
+| Analytics | Cloudflare Web Analytics (built-in) |
+| Hosting | Cloudflare Pages |
 | Domain | aa-flooring.ca (pending connection) |
 
 ---
@@ -71,7 +71,7 @@ Minimum needed to run locally and deploy:
 
 ```bash
 # Required
-NEXT_PUBLIC_SITE_URL=https://aa-flooring.vercel.app
+NEXT_PUBLIC_SITE_URL=https://aa-flooring.ca
 
 # Optional — site works without these
 NEXT_PUBLIC_SANITY_PROJECT_ID=      # Sanity CMS

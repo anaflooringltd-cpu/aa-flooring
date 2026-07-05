@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { siteConfig, type ServiceSlug } from "@/lib/site-config";
 
 const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${siteConfig.nap.email}`;
@@ -10,9 +11,10 @@ interface Props {
   cityName?: string;
 }
 
-type Status = "idle" | "sending" | "success" | "error";
+type Status = "idle" | "sending" | "error";
 
 export function QuoteForm({ serviceSlug, cityName }: Props) {
+  const router = useRouter();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
@@ -25,7 +27,7 @@ export function QuoteForm({ serviceSlug, cityName }: Props) {
 
     // Honeypot — silently drop bots
     if (data.company_website) {
-      setStatus("success");
+      router.push("/thank-you");
       return;
     }
 
@@ -70,35 +72,11 @@ export function QuoteForm({ serviceSlug, cityName }: Props) {
       // from the visitor's perspective regardless of the body flag.
       if (!res.ok) throw new Error(json.message ?? "Form service returned an error.");
 
-      setStatus("success");
-      form.reset();
+      router.push("/thank-you");
     } catch (err) {
       setStatus("error");
       setErrorMsg(err instanceof Error ? err.message : "Network error.");
     }
-  }
-
-  if (status === "success") {
-    return (
-      <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-8">
-        <p className="font-display text-2xl">Thanks — message sent.</p>
-        <p className="mt-3 text-sm text-[var(--color-muted)]">
-          We&rsquo;ll be in touch within one business day. For anything urgent,
-          call{" "}
-          <a href={`tel:${siteConfig.nap.telephone}`} className="underline">
-            {siteConfig.nap.telephoneDisplay}
-          </a>
-          .
-        </p>
-        <button
-          type="button"
-          onClick={() => setStatus("idle")}
-          className="mt-6 text-sm underline underline-offset-4"
-        >
-          Send another
-        </button>
-      </div>
-    );
   }
 
   const serviceLabel = serviceSlug

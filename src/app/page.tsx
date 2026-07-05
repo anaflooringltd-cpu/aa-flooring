@@ -149,9 +149,9 @@ export default function HomePage() {
           {[
             { src: "/images/portfolio/25-naturale-white-oak-custom-waterfall-staircase.jpeg", alt: "White oak waterfall staircase" },
             { src: "/images/portfolio/22-curved-staircase.jpg", alt: "Curved hardwood staircase" },
-            { src: "/images/portfolio/18-herringbone-installation-in-kitchen.jpeg", alt: "Herringbone hardwood in a kitchen" },
-            { src: "/images/portfolio/23-white-oak-engineered-harwood-custome-nosing-accessories.jpeg", alt: "White oak with custom nosing" },
-            { src: "/images/portfolio/01-natural-engineered-hardwood.jpeg", alt: "Natural engineered hardwood" },
+            { src: "/images/portfolio/24-beautyfull-flow-of-wood.jpeg", alt: "Wide plank hardwood flowing through open living area" },
+            { src: "/images/portfolio/16-engineered-hardwood-stair-treads.jpeg", alt: "Engineered hardwood stair treads" },
+            { src: "/images/portfolio/26-light-staind-engineered-wood.jpeg", alt: "Light stained engineered hardwood" },
           ].map((p) => (
             <Link
               key={p.src}
