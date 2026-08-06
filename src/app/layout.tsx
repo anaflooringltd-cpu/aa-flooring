@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.name }],
   alternates: { canonical: "/" },
+  verification: {
+    google: "Aoo3v7O2aVRMWG2pXnGB8uP2BlJRWaJjIKCxabH2JnE",
+  },
   openGraph: {
     type: "website",
     locale: "en_CA",
