@@ -63,9 +63,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18299833283"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
-        <Script id="google-ads-tag" strategy="afterInteractive">{`
+        <Script id="google-ads-tag" strategy="beforeInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
