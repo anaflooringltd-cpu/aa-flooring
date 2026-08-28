@@ -37,6 +37,13 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <a
             href={`tel:${siteConfig.nap.telephone}`}
+            aria-label={`Call ${siteConfig.nap.telephoneDisplay}`}
+            className="flex items-center md:hidden"
+          >
+            <Phone className="h-5 w-5" aria-hidden />
+          </a>
+          <a
+            href={`tel:${siteConfig.nap.telephone}`}
             className="hidden items-center gap-1.5 text-sm md:flex"
           >
             <Phone className="h-4 w-4" aria-hidden />
