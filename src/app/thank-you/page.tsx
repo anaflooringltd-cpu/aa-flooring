@@ -20,6 +20,9 @@ export default function ThankYouPage() {
           'currency': 'CAD'
         });
       `}</Script>
+      <Script id="meta-lead-event" strategy="afterInteractive">{`
+        fbq('track', 'Lead');
+      `}</Script>
       <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-muted)]">
         Quote request received
       </p>
