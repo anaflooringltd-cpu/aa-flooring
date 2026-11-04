@@ -4,8 +4,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { siteConfig, type ServiceSlug } from "@/lib/site-config";
 
-const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${siteConfig.nap.email}`;
-
 interface Props {
   serviceSlug?: ServiceSlug;
   cityName?: string;
@@ -37,40 +35,33 @@ export function QuoteForm({ serviceSlug, cityName }: Props) {
     const cityLabel = data.city || cityName || "—";
 
     const payload = {
-      _subject: `Quote request — ${serviceLabel} (${cityLabel})`,
-      _template: "table",
-      _captcha: "false", // we use our own honeypot
       service: serviceLabel,
       city: cityLabel,
       name: data.name,
       phone: data.phone,
       email: data.email,
-      square_footage: data.squareFootage || "—",
+      squareFootage: data.squareFootage || "",
       message: data.message,
-      source_page: typeof window !== "undefined" ? window.location.pathname : "",
+      sourcePage: typeof window !== "undefined" ? window.location.pathname : "",
     };
 
     setStatus("sending");
 
     try {
-      const res = await fetch(FORMSUBMIT_ENDPOINT, {
+      const res = await fetch("/api/quote", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
       const json = (await res.json().catch(() => ({}))) as {
-        success?: string | boolean;
+        success?: boolean;
         message?: string;
       };
-      // Formsubmit replies 200 with success="false" + an activation message
-      // until the inbox owner clicks the "Activate Form" link once. The
-      // submission is still received in their queue, so treat 200 as success
-      // from the visitor's perspective regardless of the body flag.
-      if (!res.ok) throw new Error(json.message ?? "Form service returned an error.");
+
+      if (!res.ok || !json.success) {
+        throw new Error(json.message ?? "Form service returned an error.");
+      }
 
       router.push("/thank-you");
     } catch (err) {
